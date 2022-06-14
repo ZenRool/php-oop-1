@@ -1,4 +1,21 @@
-<?php?>
+<?php
+class Movie {
+    public $movieName;
+    public $genre;
+    public $year;
+    private $minutes;
+
+    function __construct($_movieName, $_genre = [], $_year, $_minutes = 0) {
+        $this->movieName = $_movieName;
+        $this->genre = $_genre;
+        $this->year = $_year;
+        $this->minutes = $_minutes;
+    }
+    public function getHours() {
+        return floor($year/60) . ":" . $year % 60;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
